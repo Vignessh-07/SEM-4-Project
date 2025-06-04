@@ -5,7 +5,7 @@ database.connect(process.env.MONGODB_URL);
 
 const companyschema=new database.Schema({
   username:{
-    type:Number,
+    type:String,
     required:true,
     unique:true,
   },
