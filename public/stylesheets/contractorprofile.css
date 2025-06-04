@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    /* background-color: yellow; */
+    background-color: #34495E;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 15px black;
+}
+.navbar{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 0px 110px;    
+}
+
+.image{
+    border: 0px solid black;
+    border-radius: 60px;
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+.image :nth-child(1){
+    height: 180px;
+    width: 240px;
+}
+.navbartext{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.navbartext :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(6){
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbartext :nth-child(1):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(2):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(3):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(4):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(5):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbartext :nth-child(6):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbartext :nth-child(1).active{
+    color: white;
+}
+
+.main{
+    /* background-image: linear-gradient(to bottom right, red, #00003f); */
+    background-image: linear-gradient(to bottom right, #1ABC9C, #2C3E50);
+    height: 500vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search{
+    margin-top: 40px;
+    padding: 30px 30px;
+    border: 7px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 70vh;
+    background-image: linear-gradient(to bottom right, orange, red);
+}
+.search :nth-child(1){
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    width: 60vh;
+    background-color:rgba(0,0,0,0.5);
+    color: white;
+}
+
+.search :nth-child(2){
+    font-size: 15px;
+    font-weight: 900;
+    width: 80px;
+    padding: 5px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(240, 235, 235, 0.3);
+}
+
+.search :nth-child(2):hover{
+    background-image: linear-gradient(to bottom right, blue,red);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.search :nth-child(1):hover{
+    background-color: rgb(33, 1, 1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.main h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+   text-decoration: underline;
+   color: white;
+ }
+ .main ol{
+    margin-top: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     row-gap: 15px;
+     width: 80vw;
+ }
+ .main p{
+    color: black;
+    margin-top: 30px;
+ }
+

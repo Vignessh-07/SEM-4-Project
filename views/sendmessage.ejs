@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/sendmessage.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/company.jpg" alt=""></div>
+            <div class="navbartext">
+                <a href="/companyprofile">Home🏠</a>
+                <a href="/viewcontractor">View Contractors👀</a>
+                <a class="active" href="/sendmessage">Send Message💬</a>
+                <a href="/viewreplymessage">View Reply🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+        <form class="form" action="/sendmessage" method="post">
+           <div class="forminside">
+            <label class="text">enter username of contractor</label>
+            <input class="input" type="text" name="contractor_username" placeholder="username of contractor">
+           </div>
+            
+           <div class="forminside">
+            <label class="text">enter message</label>
+            <input class="input" type="text" name="message" placeholder="message for contractor">
+           </div>
+            
+           <div class="forminside">
+            <label class="text">enter domain of workers</label>
+            <input class="input" type="text" name="field" placeholder="domain of worker">
+           </div>
+
+            <div class="forminside">
+                <label class="text">enter no of workers</label>
+            <input class="input1" type="number" name="numberofworkers" placeholder="no of workers">
+            </div>
+            
+           <div class="forminside">
+            <label class="text">enter the number of days worker required</label>
+            <input class="input1" type="number" name="noofdays" placeholder="no of days">
+           </div>
+            
+            <input type="submit" value="Send Message">
+        </form>
+        </div>
+    </div>
+</body>
+
+</html>

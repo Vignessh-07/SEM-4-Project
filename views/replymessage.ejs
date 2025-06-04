@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/replymessage.css">
+</head>
+<body>
+   <div class="main">
+    <form class="form"  action="/replymessage" method="post">
+        <div class="inside">
+            <label class="text" for="companyusername">enter the message id</label>
+            <input class="input" name="messageid" type="text" placeholder="message id">
+        </div>
+       <div class="inside">
+           <label class="text" for="">select status</label>
+           <select class="input1" name="status" >
+               <option value="accepted">Accept</option>
+               <option value="rejected">Reject</option>
+            </select>
+       </div>
+        <input type="submit" value="Submit">
+        <a href="/notification">go to main page</a>
+       </form>
+   </div>
+</body>
+</html>

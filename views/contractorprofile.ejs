@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/contractorprofile.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/contractor.jpg" alt=""></div>
+            <div class="navbartext">
+                <a class="active" href="/contractorprofile">Home🏠</a>
+                <a href="/createworker">Add Workers👷‍♂️</a>
+                <a href="/viewworker">View Workers👀</a>
+                <a href="/allocateworker">Allocate Workers📋</a>
+                <a href="/notification">Notifications🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+        <div class="form">
+            <form class="search" action="/searchworker" method="post">
+                <input name="searchfield" type="text" placeholder="search workers by domain...">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <% if (searchresults && searchresults.length> 0) { %>
+            <h2>Search Results:</h2>
+            <ol>
+                <% searchresults.forEach(worker=> { %>
+                    <li>
+                        worker Id:-<%= worker._id%> <br>
+                        worker name:- <%= worker.firstname %> <%= worker.middlename %> <%= worker.lastname %> <br>
+                         workingfields:- <%= worker.workingfield.join(', ') %> <br>
+                        working_status:- <%= worker.working_status%> <br>
+                       <%if(worker.working_status === "allocated"){%>
+                        work_startingdate:- <%= worker.work_startingdate%> <br>
+                        work_endingdate:- <%= worker.work_endingdate%>
+                       <%}%>
+                    </li>
+                <% }); %>
+            </ol>
+        <% } else if(searchresults.length === 0){ %>
+            <h2>Search Results:</h2>
+            <%}%>
+    </div>
+</body>
+
+</html>

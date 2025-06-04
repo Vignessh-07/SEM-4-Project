@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/viewcontractor.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/company.jpg" alt=""></div>
+            <div class="navbartext">
+                <a href="/companyprofile">Home🏠</a>
+                <a class="active" href="/viewcontractor">View Contractors👀</a>
+                <a href="/sendmessage">Send Message💬</a>
+                <a href="/viewreplymessage">View Reply🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+        <h1>List of Contractors:</h1>
+        <% if(contractors_usernames && contractors_usernames.length>0){%>
+            <ol type="1">
+                <% contractors_usernames.forEach(username => { %>
+                    <li class="list"><%= username %></li>
+                <% }); %>
+            </ol>
+            <%}else{%>
+                <p>contractors are not available</p>
+                <%}%>
+        </div>
+    </div>
+</body>
+
+</html>

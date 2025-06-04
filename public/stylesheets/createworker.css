@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+.header{
+    background-color: #34495E;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 15px black;
+}
+.navbar{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 0px 110px;    
+}
+
+.image{
+    border: 0px solid black;
+    border-radius: 60px;
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+.image :nth-child(1){
+    height: 180px;
+    width: 240px;
+}
+.navbartext{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.navbartext :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(6){
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbartext :nth-child(1):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(2):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(3):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(4):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.navbartext :nth-child(5):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbartext :nth-child(6):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbartext :nth-child(2).active{
+    color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #1ABC9C, #2C3E50);
+}
+.forminside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background-image: linear-gradient(to bottom right, orange, red);
+    padding: 80px 30px;
+    margin: 30px 0px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.forminside :nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forminside :nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.forminside :nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.forminside :nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.forminside :nth-child(5){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.forminside :nth-child(6){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.forminside :nth-child(7){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forminside :nth-child(7) :nth-child(1){
+    background-color: rgba(240, 235, 235, 0.3);
+    /* background-image: linear-gradient(to bottom right, orange, red); */
+    color: black;
+    padding: 5px 10px;
+    border: 2px solid ;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.heading{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.input{
+   color: black;
+    font-size: 16px;
+    padding: 5px;
+    height: 28px;
+    width: 240px;
+   border-radius: 7px;
+   background-color:rgba(0,0,0,0.5);
+}
+
+
+.text{
+    color: black;
+    font-size: 28px;
+  font-weight: bolder;
+}
+.forminside :nth-child(7) :nth-child(1):hover{
+    /* background-color: rgba(240, 235, 235, 0.4); */
+    background-image: linear-gradient(to bottom right, blue,red);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.input:hover{
+    background-color: rgb(225, 218, 218);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+

@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    background-image: linear-gradient(to bottom right, red, #00003f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.form{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    height: 250px;
+    width: 500px;
+    background-image: linear-gradient(to bottom right, orange, red);
+}
+
+.inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.form :nth-child(4){
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main{
+    background-image: linear-gradient(to bottom right, red, #00003f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.input1{
+    border-radius: 10px;
+    height: 30px;
+    padding: 0px  10px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 120px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+.input{
+    border-radius: 10px;
+    height: 30px;
+    padding: 10px  10px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 240px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+.form :nth-child(3){
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    height: 30px;
+    padding: 5px 10px;
+    background-color: rgba(240, 235, 235, 0.3);
+    cursor: pointer;
+}
+
+.input:hover{
+    background-color: rgb(225, 218, 218);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.input1:hover{
+    background-color: rgb(225, 218, 218);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.form :nth-child(3):hover{
+    background-image: linear-gradient(to bottom right, blue,red);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.form :nth-child(4):hover{
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}

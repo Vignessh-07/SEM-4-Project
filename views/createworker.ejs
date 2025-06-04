@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/createworker.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/contractor.jpg" alt=""></div>
+            <div class="navbartext">
+                <a href="/contractorprofile">Home🏠</a>
+                <a class="active" href="/createworker">Add Workers👷‍♂️</a>
+                <a href="/viewworker">View Workers👀</a>
+                <a href="/allocateworker">Allocate Workers📋</a>
+                <a href="/notification">Notifications🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+
+        <form class="forminside" action="/createworker" method="post">
+            <div class="heading">ADD WORKERS</div>
+            <div >
+                <label class="text">Firstname</label>
+                <input class="input" name="firstname" type="text" placeholder="firstname of worker">
+            </div>
+            <div class="second">
+                <label class="text">Middlename</label>
+                <input class="input" name="middlename" type="text" placeholder="middlename of worker">
+            </div>
+            <div class="third">
+                <label class="text">Lastname</label>
+                <input class="input" name="lastname" type="text" placeholder="lastname of worker">
+            </div>
+            <div class="fourth">
+                <label class="text">Age</label>
+                <input class="input" name="age" type="text" placeholder="age of worker">
+            </div>
+            <div class="fifth">
+                <label class="text">Fields He Has Worked In </label>
+                <input class="input" name="workingfield" type="text" placeholder="fields of workers">
+            </div>
+            <div>
+                <input type="submit" value="Add Worker">
+            </div>
+        </form>
+
+    </section>
+</body>
+
+</html>

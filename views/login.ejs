@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page </title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="mainbox">
+        <div class="firstbox">
+            <img src="/images/workersimage.png" alt="">
+        </div>
+        <div class="secondbox">
+            <div class="form">
+                <form action="/login" method="post">
+                    <div class="forminside">
+                        <span class="heading">Login</span>
+                        <% if (typeof err !=='undefined' ){%>
+                            <p class="error">
+                                <%=err%>
+                            </p>
+                            <% }%>
+                                <div class="text1">
+                                    <label class="text">Username</label>
+                                    <div>
+                                        <input name="username" class="input" type="text"
+                                            placeholder="enter your username">
+                                        <i class="ri-user-3-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="text2">
+                                    <label class="text">Password</label>
+                                    <div>
+                                        <input name="password" class="input passwordtoggle" type="password"
+                                            placeholder="enter your password">
+                                        <i class="ri-eye-off-line eye-toggle"></i>
+                                        <i class="ri-eye-line eye-toggle" style="display: none;"></i>
+                                    </div>
+                                </div>
+                                <div class="text3">
+                                    <label class="text">Enter your Domain</label>
+                                    <div>
+                                        <select name="domain" class="input1">
+                                            <option value="contractor">Contractor</option>
+                                            <option value="company">Company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <input type="submit" value="login">
+                                </div>
+
+                    </div>
+                    <div class="nextpage">
+                        <a href="/">not registered yet? register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/register.js"></script>
+</body>
+
+</html>

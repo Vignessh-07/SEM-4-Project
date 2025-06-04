@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/companyprofile.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/company.jpg" alt=""></div>
+            <div class="navbartext">
+                <a class="active" href="/companyprofile">Home🏠</a>
+                <a href="/viewcontractor">View Contractors👀</a>
+                <a href="/sendmessage">Send Message💬</a>
+                <a href="/viewreplymessage">View Reply🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+        <h1>Workers Allocated:</h1>
+        <% if(workerresults && workerresults.length>0 ){%>
+            <ol>
+                <% workerresults.forEach(worker => { %>
+                    <li> Name of Worker:-<%= worker.firstname %> <%= worker.middlename%> <%= worker.lastname %> <br>
+                           Allocated by:-<%= worker.createdby.username %> <br>  
+                        </li>
+                <% }); %>
+            </ol>
+         <% } else{%>
+            <p>None</p>
+            <%}%>
+        </div>
+    </div>
+</body>
+
+</html>

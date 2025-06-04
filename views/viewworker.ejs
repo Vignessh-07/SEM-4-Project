@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/viewworker.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/contractor.jpg" alt=""></div>
+            <div class="navbartext">
+                <a  href="/contractorprofile">Home🏠</a>
+                <a  href="/createworker">Add Workers👷‍♂️</a>
+                <a class="active" href="/viewworker">View Workers👀</a>
+                <a href="/allocateworker">Allocate Workers📋</a>
+                <a href="/notification">Notifications🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+   <div class="main">
+    <h1>WORKERS</h1>
+    <% if(viewresults && viewresults.length>0 ){%>
+        <ol>
+            <% viewresults.forEach(worker => { %>
+                <li>
+                     worker Id:-<%= worker._id %> <br>
+                    Worker name:-<%= worker.firstname %> <%= worker.middlename%> <%= worker.lastname %> <br>
+                     Worker age:-<%= worker.age %> years old <br>
+                    domain:-<%= worker.workingfield %> <br>
+                    status:-<%=worker.working_status %> <br>
+                    
+                    <% if(worker.working_status === "Allocated"){%>
+                        allocated to:-<%= worker.allocated_to%> <br>
+                        work starting date:- <%=worker.work_startingdate %> <br>
+                        work ending date:-<%=worker.work_endingdate%></li>
+                        <%}%>
+                    <br>
+                    <br>
+            <% }); %>
+        </ol>
+    <% } else{%>
+        <p>no worker is created by you</p>
+        <%}%>
+</div>
+</body>
+
+</html>

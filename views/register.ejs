@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page </title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="mainbox">
+        <div class="firstbox">
+            <div class="form">
+                <form action="/register" method="post">
+                    <div class="forminside">
+                        <span class="heading">Register</span>
+                        <% if (typeof err !=='undefined' ){%>
+                            <p class="error">
+                                <%=err%>
+                            </p>
+                            <% }%>
+                                <div class="text1">
+                                    <label class="text">Username</label>
+                                    <div> <input name="username" class="input" type="text" placeholder="enter your username">
+                                        <i class="ri-user-3-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="text2">
+                                    <label class="text">Password</label>
+                                    <div>
+                                        <input name="password" class="input passwordtoggle" type="password"  placeholder="enter your password">
+                                        <i class="ri-eye-off-line eye-toggle"></i>
+                                    </div>
+                                </div>
+                                <div class="text3">
+                                    <label class="text">Enter your Domain</label>
+                                    <div>
+                                        <select name="domain" class="input1">
+                                            <option value="contractor">Contractor</option>
+                                            <option value="company">Company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <input type="submit" value="register">
+                                </div>
+
+                    </div>
+                    <div class="nextpage">
+                        <a href="/login">Already registered? Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="secondbox">
+            <img src="/images/workersimage.png" alt="">
+        </div>
+    </div>
+    <script src="/javascripts/register.js"></script>
+</body>
+
+</html>

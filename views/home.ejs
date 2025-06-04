@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .search {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search :nth-child(1) {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form class="search" action="/searchworker" method="post">
+            <input name="searchfield" type="text" placeholder="search workers by domain...">
+            <input type="submit" value="search">
+        </form>
+    </section>
+    <% if (searchresults && searchresults.length> 0) { %>
+        <h2>Search Results:</h2>
+        <ul>
+            <% searchresults.forEach(worker=> { %>
+                <li>
+                    <%= worker.firstname %> <%= worker.lastname %> - <%= worker.workingfield.join(', ') %>
+                    <%= worker.working_status%> - <%= worker.work_startingdate%> -<%= worker.work_endingdate%>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+
+    <a href="/contractorprofile">go to profile page</a>
+</body>
+</html>

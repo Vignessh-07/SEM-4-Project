@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/allocateworker.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/contractor.jpg" alt=""></div>
+            <div class="navbartext">
+                <a  href="/contractorprofile">Home🏠</a>
+                <a  href="/createworker">Add Workers👷‍♂️</a>
+                <a  href="/viewworker">View Workers👀</a>
+                <a  class="active" href="/allocateworker">Allocate Workers📋</a>
+                <a   href="/notification">Notifications🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="main">
+        <form class="form1" action="/allocate" method="post">
+            <div class="forminside">
+                <label class="text" for="allocatedto">allocated to company's username</label>
+                <input name="allocatedto" class="input1" type="text" placeholder="company's username">
+            </div>
+
+            <div class="forminside">
+                <label class="text" for="firstname">enter Worker-Id</label>
+                <input class="input1" name="workerid" class="firstname" type="text" placeholder="Worker-Id">
+            </div>
+
+           <div class="forminside">
+            <label class="text" for="date1">enter work starting date</label>
+            <input class="input2" name="date1" class="date1" type="date">
+           </div>
+    
+           <div class="forminside">
+            <label class="text" for=""> enter work ending date</label>
+            <input class="input2" name="date2" class="date2" type="date">
+           </div>
+    
+            <input type="submit" value="Allocate">
+        </form>
+    
+        <form class="form2" action="/deallocate" method="post">
+            <label class="text" for="firstname">enter Worker-Id</label>
+            <input name="workerid_deallocate"  class="input3" type="text" placeholder="worker-id">
+
+            <input type="submit" value="Deallocate">
+        </form>
+    </div>
+
+</body>
+
+</html>

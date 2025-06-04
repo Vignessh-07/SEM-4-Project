@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor profile</title>
+    <link rel="stylesheet" href="/stylesheets/viewreplymessage.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="image"><img src="/images/company.jpg" alt=""></div>
+            <div class="navbartext">
+                <a href="/companyprofile">Home🏠</a>
+                <a href="/viewcontractor">View Contractors👀</a>
+                <a href="/sendmessage">Send Message💬</a>
+                <a class="active" href="/viewreplymessage">View Reply🔔</a>
+                <a href="/login">Logout🚪</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+        <h1>REPLY</h1>
+        <% if(results && results.length>0 ){%>
+            <ol>
+                <% results.forEach(message => { %>
+                    <li> message to:-<%= message.contractor_username %> <br>
+                         message:-<%= message.message%> <br>
+                          domain:-<%= message.worker_field %> <br>
+                           requirement:-<%= message.numberofworkers %>workers <br> 
+                           required for:-<%= message.noofdays%> days <br>
+                           <br>
+                           Reply:-<%= message.message_status %>
+                        </li>
+                <% }); %>
+            </ol>
+           <br>
+          
+        <% } else{%>
+            <p>no reply</p>
+            <%}%>
+        </div>
+    </div>
+</body>
+
+</html>
